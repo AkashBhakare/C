@@ -8,11 +8,46 @@
  *           07/05/2022  Created                                              *
  *                                                                          *
  ****************************************************************************/
-
 #include <stdio.h>
 #include <stdlib.h>
+int main()
+{
+    int age; //stores age of the player
+    const int MIN_AGE = 1;
+    const int MAX_AGE = 100;
+
+    printf("Please enter the age of the player in years (1-100): ");
+    scanf("%i", &age);
+
+    switch (age)
+    {
+    case 1 ... 17:
+        printf("Player belongs to Junior Group\n");
+        break;
+    case 18 ... 29:
+        printf("Player belongs to Senior Group\n");
+        break;
+    case 30 ... 44:
+        printf("Player belongs to Master Group\n");
+        break;
+    case 45 ... 100:
+        printf("Player belongs to Veteran Group\n");
+        break;
+    default:
+        fprintf(stderr, "Invalid Age entered.\n");
+
+    }
+    return (EXIT_SUCCESS);
+}
 
 
+
+
+
+
+
+
+/*
 int main(void)
 {
 
@@ -30,5 +65,7 @@ int main(void)
 	}else if(age >= 45){
 		printf("It's is Veteran");
 	}
+    return 0;
 }
 
+*/
